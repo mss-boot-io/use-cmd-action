@@ -9,12 +9,13 @@ class cmdApp {
 
 async function run(): Promise<void> {
   const app = core.getInput("app")
+  const url = core.getInput("url")
   try {
     const http = new httpm.HttpClient('http-client')
     const {
       result,
       statusCode
-    } = await http.getJson<cmdApp[]>('https://mss-boot-io.github.io/use-cmd-action/cmd-list.json')
+    } = await http.getJson<cmdApp[]>(url)
     if (statusCode != 200 || result == null) {
       core.error('source get error')
     }
