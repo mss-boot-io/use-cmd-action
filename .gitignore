@@ -97,3 +97,13 @@ Thumbs.db
 # Ignore built ts files
 __tests__/runner/*
 lib/**/*
+
+### idea ###
+.idea
+
+### vscode ###
+.vscode
+
+configmap-update
+
+pnpm-lock.yaml

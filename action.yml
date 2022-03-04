@@ -1,8 +1,8 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'use cmd action'
+description: 'action for cmd tools'
+author: 'lwnmengjing<991154416@qq.com>'
 inputs:
-  app: # select this
+  app:
     required: true
     description: 'select app cmd'
     default: ''
