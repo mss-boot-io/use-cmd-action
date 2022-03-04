@@ -1,0 +1,22 @@
+name: Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'config/**'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Push Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./config
+          keep_files: true
