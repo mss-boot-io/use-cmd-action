@@ -11,5 +11,5 @@ inputs:
     description: 'tools list url'
     default: 'https://mss-boot-io.github.io/use-cmd-action/cmd-list.json'
 runs:
-  using: 'node16'
+  using: 'node12'
   main: 'dist/index.js'
