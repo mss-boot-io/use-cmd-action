@@ -2,5 +2,9 @@
   {
     "app": "configmap-update",
     "source": "https://mss-boot-io.github.io/configmap-update/v0.6/linux_amd64"
+  },
+  {
+    "app": "endpoint-discover",
+    "source": "https://mss-boot-io.github.io/endpoint-discover/v0.0.3/linux_amd64"
   }
 ]

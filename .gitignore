@@ -105,5 +105,6 @@ lib/**/*
 .vscode
 
 configmap-update
+endpoint-discover
 
 pnpm-lock.yaml
