@@ -5,6 +5,6 @@
   },
   {
     "app": "endpoint-discover",
-    "source": "https://mss-boot-io.github.io/endpoint-discover/v0.0.3/linux_amd64"
+    "source": "https://mss-boot-io.github.io/endpoint-discover/v0.0.4/linux_amd64"
   }
 ]
