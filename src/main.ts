@@ -1,7 +1,7 @@
-import * as core from '@actions/core'
 import * as child from 'child_process'
-import {existsSync} from 'fs'
+import * as core from '@actions/core'
 import * as httpm from '@actions/http-client'
+import {existsSync} from 'fs'
 
 class cmdApp {
   app?: string
@@ -11,6 +11,7 @@ class cmdApp {
 async function run(): Promise<void> {
   const app = core.getInput('app')
   const url = core.getInput('url')
+  const args = core.getInput('args')
   try {
     const http = new httpm.HttpClient('http-client')
     const {result, statusCode} = await http.getJson<cmdApp[]>(url)
@@ -30,7 +31,7 @@ async function run(): Promise<void> {
     existsSync(`./${app}`) ||
       child.execSync(`curl -o ${app} ${source} && chmod +x ${app}`)
 
-    child.exec(`./${app}`, (err, std) => {
+    child.exec(`./${app} ${args}`, (err, std) => {
       if (err) {
         core.setFailed(err)
         return

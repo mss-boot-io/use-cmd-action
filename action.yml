@@ -10,6 +10,10 @@ inputs:
     required: false
     description: 'tools list url'
     default: 'https://mss-boot-io.github.io/use-cmd-action/cmd-list.json'
+  args:
+    required: false
+    description: 'cmd args'
+    default: ''
 runs:
   using: 'node12'
   main: 'dist/index.js'

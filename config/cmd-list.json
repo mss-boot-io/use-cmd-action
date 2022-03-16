@@ -6,5 +6,9 @@
   {
     "app": "endpoint-discover",
     "source": "https://mss-boot-io.github.io/endpoint-discover/v0.0.4/linux_amd64"
+  },
+  {
+    "app": "kubectl",
+    "source": "https://dl.k8s.io/release/v1.23.4/bin/linux/amd64/kubectl"
   }
 ]

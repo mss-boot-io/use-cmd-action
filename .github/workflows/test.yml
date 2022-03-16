@@ -23,4 +23,5 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./
         with:
-          app: configmap-update
+          app: kubectl
+          args: version
