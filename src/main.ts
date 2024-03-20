@@ -8,7 +8,7 @@ class cmdApp {
   source?: string
 }
 
-async function run(): Promise<void> {
+export async function run(): Promise<void> {
   const app = core.getInput('app')
   const url = core.getInput('url')
   const args = core.getInput('args')
@@ -42,5 +42,3 @@ async function run(): Promise<void> {
     if (error instanceof Error) core.setFailed(error.message)
   }
 }
-
-run()
